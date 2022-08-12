@@ -37,7 +37,7 @@ export const FeaturedCategories: FC = () => {
             {categories
               .find(({ id }) => id === selectedCategory)
               ?.children.map((item) => (
-                <ProductLarge {...item} />
+                <ProductLarge {...item} key={item.id} />
               ))}
           </div>
         </div>
