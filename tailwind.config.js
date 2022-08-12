@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
 const plugin = require("tailwindcss/plugin");
 
 /** @type {import('tailwindcss').Config} */
@@ -16,14 +17,21 @@ module.exports = {
         primary: "#458df6",
       },
     },
+    fontFamily: {
+      sans: ["Fira Sans Condensed", ...defaultTheme.fontFamily.sans],
+    },
     screens: {
       lg: "1280px",
     },
+  },
+  daisyui: {
+    themes: [{ dark: {} }, { light: {} }],
   },
   plugins: [
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/forms"),
     require("@tailwindcss/line-clamp"),
+    require("daisyui"),
     require("prettier-plugin-tailwindcss"),
 
     plugin((helpers) => {

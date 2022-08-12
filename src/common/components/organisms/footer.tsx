@@ -23,7 +23,9 @@ export const Footer: FC = () => {
           {/* menu */}
           {menuItems.map(({ items, key, label }) => (
             <div key={key} className="flex flex-col gap-y-5">
-              <h4>{label}</h4>
+              <span className="text-[14px] font-medium text-white">
+                {label}
+              </span>
               <ul className="flex flex-col">
                 {items.map(({ href, key, label }) => (
                   <li key={key}>
@@ -54,7 +56,7 @@ export const Footer: FC = () => {
           </div>
           {/* tecdoc inside */}
           <div className="col-span-4 flex flex-col gap-y-5 border-y py-[35px]">
-            <h3>TecDoc inside</h3>
+            <span>TecDoc inside</span>
             <p className="text-xs leading-5 opacity-50">
               The data shown here, especially the complete database, may not be
               copied. It is strictly prohibited to duplicate the data and
