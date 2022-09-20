@@ -1,9 +1,11 @@
 // CSS
 import "tailwindcss/tailwind.css";
+
 //
 import type { AppPropsWithLayout } from "next/app";
 import type { FCC } from "react";
 import { RecoilRoot } from "recoil";
+
 //
 
 const GarageShoppingApp: React.FC<AppPropsWithLayout> = ({

@@ -10,16 +10,18 @@ import {
   MostVisited,
   NewProducts,
   Services,
-} from "../components";
+} from "modules/others/home/components";
 
 export const HomePage: NextPageWithLayout = () => {
   return (
-    <div className="container mx-auto flex flex-col gap-y-[100px] pt-5 pb-40">
-      <NewProducts />
-      <FeaturedCategories />
-      <Services />
-      <MostVisited />
-      <BrowseHistory />
+    <div className="container mx-auto">
+      <div className="flex flex-col gap-y-[100px] pt-5 pb-40">
+        <NewProducts />
+        <FeaturedCategories />
+        <Services />
+        <MostVisited />
+        <BrowseHistory />
+      </div>
     </div>
   );
 };

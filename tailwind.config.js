@@ -20,12 +20,19 @@ module.exports = {
     fontFamily: {
       sans: ["Fira Sans Condensed", ...defaultTheme.fontFamily.sans],
     },
-    screens: {
-      lg: "1280px",
-    },
+    // screens: {
+    //   lg: "1280px",
+    // },
   },
   daisyui: {
-    themes: [{ dark: {} }, { light: {} }],
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/colors/themes")["[data-theme=light]"],
+          primary: "#458df6",
+        },
+      }
+    ]
   },
   plugins: [
     require("@tailwindcss/aspect-ratio"),
@@ -36,8 +43,10 @@ module.exports = {
 
     plugin((helpers) => {
       _addBase(helpers);
+      _addComponents(helpers);
       _addUtilities(helpers);
     }),
+
   ],
 };
 
@@ -46,6 +55,24 @@ const _addBase = ({ addBase, theme }) => {
     p: {
       fontSize: "0.875rem",
       lineHeight: "1.4",
+    },
+  });
+};
+const _addComponents = ({ addComponents, theme }) => {
+  addComponents({
+    ".login-container": {
+      width: "100%",
+      paddingLeft: "40px",
+      paddingRight: "40px",
+      [`@media (min-width: ${theme("screens.lg")})`]: {maxWidth: "640px"},
+      [`@media (min-width: ${theme("screens.xl")})`]: {maxWidth: "760px"},
+      [`@media (min-width: ${theme("screens.2xl")})`]: {maxWidth: "1160px"},
+    },
+    ".login-layout": {
+      display: "grid",
+      [`@media (min-width: ${theme("screens.lg")})`]: {gridTemplateColumns: "640px 1fr"},
+      [`@media (min-width: ${theme("screens.xl")})`]: {gridTemplateColumns: "760px 1fr"},
+      [`@media (min-width: ${theme("screens.2xl")})`]: {gridTemplateColumns: "1160px 1fr"},
     },
   });
 };

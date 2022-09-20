@@ -14,7 +14,7 @@ export const MainLayout: FCC = ({ children }) => {
       <ExternalNavigation current="shopping" />
       <Header />
       <InternalNavigation current="all" />
-      <div className="grow">{children}</div>
+      <main className="grow">{children}</main>
       <Footer />
     </div>
   );
