@@ -31,6 +31,10 @@ module.exports = {
           ...require("daisyui/src/colors/themes")["[data-theme=light]"],
           primary: "#458df6",
         },
+        // dark: {
+        //   ...require("daisyui/src/colors/themes")["[data-theme=dark]"],
+        //   primary: "#458df6",
+        // },
       }
     ]
   },
@@ -60,14 +64,6 @@ const _addBase = ({ addBase, theme }) => {
 };
 const _addComponents = ({ addComponents, theme }) => {
   addComponents({
-    ".login-container": {
-      width: "100%",
-      paddingLeft: "40px",
-      paddingRight: "40px",
-      [`@media (min-width: ${theme("screens.lg")})`]: {maxWidth: "640px"},
-      [`@media (min-width: ${theme("screens.xl")})`]: {maxWidth: "760px"},
-      [`@media (min-width: ${theme("screens.2xl")})`]: {maxWidth: "1160px"},
-    },
     ".login-layout": {
       display: "grid",
       [`@media (min-width: ${theme("screens.lg")})`]: {gridTemplateColumns: "640px 1fr"},
