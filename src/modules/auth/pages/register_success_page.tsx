@@ -1,5 +1,5 @@
 //
-import { ArrowSmLeftIcon } from "@heroicons/react/outline";
+import { ArrowSmallLeftIcon } from "@heroicons/react/24/outline";
 import type { NextPageWithLayout } from "next";
 import Image from "next/image";
 import Link from "next/link";

@@ -1,5 +1,5 @@
 //
-import { ChatIcon } from "@heroicons/react/solid";
+import { ChatBubbleOvalLeftEllipsisIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import type { FC } from "react";
@@ -47,7 +47,7 @@ export const Footer: FC = () => {
                   <Link href={href}>
                     <a>
                       {/* <Image src="" className="h-6 w-6" /> */}
-                      <ChatIcon className="h-6 w-6" />
+                      <ChatBubbleOvalLeftEllipsisIcon className="h-6 w-6" />
                     </a>
                   </Link>
                 </li>

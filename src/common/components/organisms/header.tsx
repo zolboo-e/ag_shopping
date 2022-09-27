@@ -3,7 +3,7 @@ import {
   HeartIcon,
   ShoppingCartIcon,
   UserIcon,
-} from "@heroicons/react/outline";
+} from "@heroicons/react/24/outline";
 import type { FC } from "react";
 import Link from "next/link";
 //

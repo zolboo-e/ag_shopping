@@ -1,5 +1,8 @@
 //
-import { ChevronDownIcon, SearchIcon } from "@heroicons/react/outline";
+import {
+  ChevronDownIcon,
+  MagnifyingGlassIcon,
+} from "@heroicons/react/24/outline";
 import type { FC } from "react";
 //
 
@@ -20,7 +23,7 @@ export const HeaderSearch: FC = () => {
         placeholder="Opel GM DEXO S2"
       />
       <button className="my-[1px] -ml-[41px] rounded-md bg-primary p-2.5">
-        <SearchIcon className="h-5 w-5 text-white" />
+        <MagnifyingGlassIcon className="h-5 w-5 text-white" />
       </button>
     </form>
   );

@@ -1,31 +1,32 @@
 //
-import { ArrowSmLeftIcon } from "@heroicons/react/outline";
+import { ArrowSmallLeftIcon } from "@heroicons/react/24/outline";
 import type { NextPageWithLayout } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 //
+import { CustomButton, CustomLinkButton } from "common/components";
 import { classNames } from "common/utils";
 
 //
 
 export const LoginPage: NextPageWithLayout = () => {
-  return (
-    <div className="login-layout">
-      <div className="h-full overflow-y-auto px-10">
-        <div className={classNames("mx-auto w-full", "sm:max-w-[480px]")}>
-          <LoginPageView />
-        </div>
-      </div>
-      <div className="relative">
-        <Image
-          src="https://placeimg.com/1000/1000/people"
-          layout="fill"
-          objectFit="cover"
-        />
-      </div>
-    </div>
-  );
+  // return (
+  //   <div className="login-layout">
+  //     <div className="h-full overflow-y-auto px-10">
+  //       <div className={classNames("mx-auto w-full", "sm:max-w-[480px]")}>
+  //         <LoginPageView />
+  //       </div>
+  //     </div>
+  //     <div className="relative">
+  //       <Image
+  //         src="https://placeimg.com/1000/1000/people"
+  //         layout="fill"
+  //         objectFit="cover"
+  //       />
+  //     </div>
+  //   </div>
+  // );
   return (
     <div className="container mx-auto">
       <LoginPageView />
@@ -39,13 +40,13 @@ const LoginPageView: React.FC = () => {
       {/* leading */}
       <div className="flex w-full flex-col items-center gap-y-12">
         {/* header */}
-        {/* <div className={classNames("flex w-full", "lg:hidden")}>
+        <div className={classNames("flex w-full", "lg:hidden")}>
           <Link href="">
-            <a className="btn btn-ghost btn-square bg-gray-100 text-black">
-              <ArrowSmLeftIcon className="h-8 w-8" />
+            <a className="btn btn-square btn-ghost bg-gray-100 text-black">
+              <ArrowSmallLeftIcon className="h-8 w-8" />
             </a>
           </Link>
-        </div> */}
+        </div>
         {/* logo */}
         <div className="flex items-center gap-x-1.5">
           <div className="avatar">
@@ -75,7 +76,7 @@ const LoginPageView: React.FC = () => {
               type="password"
             />
           </fieldset>
-          <button className="btn btn-primary normal-case">Нэвтрэх</button>
+          <CustomButton>{`Нэвтрэх`}</CustomButton>
           <div className="flex justify-center gap-x-1.5 text-gray-400">
             Нууц үг мартсан уу?
             <Link href="/auth/register">
@@ -86,25 +87,25 @@ const LoginPageView: React.FC = () => {
       </div>
       {/* trailing */}
       <div className="flex w-full flex-col gap-y-2.5">
-        <Link href="">
-          <a className="btn bg-black normal-case">Log in with Apple</a>
-        </Link>
-        <Link href="">
-          <a className="btn border-gray-100 bg-[#3b5998] normal-case">
-            Log in with Facebook
-          </a>
-        </Link>
-        <Link href="">
-          <a className="btn btn-ghost border-gray-100 normal-case">
-            Login as guest
-          </a>
-        </Link>
+        <CustomLinkButton href="" className="bg-black">
+          {`Log in with Apple`}
+        </CustomLinkButton>
+        <CustomLinkButton href="" className="bg-[#3b5998]">
+          {`Log in with Facebook`}
+        </CustomLinkButton>
+        <CustomLinkButton
+          href=""
+          className="btn-ghost border-gray-100 bg-transparent"
+        >
+          {`Login as guest`}
+        </CustomLinkButton>
         <div className="divider">OR</div>
-        <Link href="/auth/register">
-          <a className="btn btn-ghost bg-gray-100 normal-case text-black">
-            Бүртгэл үүсгэх
-          </a>
-        </Link>
+        <CustomLinkButton
+          href="/auth/register"
+          className="btn-ghost border-gray-100 bg-gray-100"
+        >
+          {`Бүртгэл үүсгэх`}
+        </CustomLinkButton>
       </div>
     </div>
   );

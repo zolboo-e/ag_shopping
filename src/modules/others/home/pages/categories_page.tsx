@@ -12,10 +12,10 @@ import {
   Services,
 } from "modules/others/home/components";
 
-export const HomePage: NextPageWithLayout = () => {
+export const CategoriesPage: NextPageWithLayout = () => {
   return (
     <div className="container mx-auto">
-      <div className="h-[2000px]">{`Home Page`}</div>
+      <div className="h-[2000px]">{`Categories Page`}</div>
       {/* <div className="flex flex-col gap-y-[100px] pt-5 pb-40">
         <NewProducts />
         <FeaturedCategories />
@@ -26,6 +26,6 @@ export const HomePage: NextPageWithLayout = () => {
     </div>
   );
 };
-HomePage.getLayout = (page) => {
+CategoriesPage.getLayout = (page) => {
   return <MainLayout>{page}</MainLayout>;
 };
