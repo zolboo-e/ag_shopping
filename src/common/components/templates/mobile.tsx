@@ -11,14 +11,16 @@ import {
 export const MobileLayout: FCC = ({ children }) => {
   return (
     <Drawer>
-      <div className="px-5">
-        <IgnoreParentSize className="sticky top-0">
-          <MobileHeader />
-        </IgnoreParentSize>
-        <main className="py-5 pb-10">{children}</main>
-        <div className="sticky bottom-5">
-          <MobileBottomNavigation />
-        </div>
+      <IgnoreParentSize className="fixed top-0 w-full">
+        <MobileHeader />
+      </IgnoreParentSize>
+      <main className="p-5">
+        <div className="h-[68px]"></div>
+        {children}
+        <div className="h-[98px]"></div>
+      </main>
+      <div className="fixed bottom-5 w-full px-5">
+        <MobileBottomNavigation />
       </div>
     </Drawer>
   );
