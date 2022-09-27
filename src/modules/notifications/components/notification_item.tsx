@@ -1,4 +1,5 @@
 //
+import Link from "next/link";
 import type { ReactNode } from "react";
 
 //
@@ -8,11 +9,13 @@ import { classNames } from "common/utils";
 interface INotificationItem {
   content: ReactNode;
   hasSeen?: boolean;
+  id: string;
   title: string;
 }
 export const NotificationItem: React.FC<INotificationItem> = ({
   content,
   hasSeen,
+  id,
   title,
 }) => {
   return (
@@ -41,7 +44,9 @@ export const NotificationItem: React.FC<INotificationItem> = ({
           <XIcon className={classNames("h-full w-full fill-black")} />
         </div>
         {/* content */}
-        <div className="col-start-2">{content}</div>
+        <Link href={`/notifications/${id}`}>
+          <a className="col-start-2">{content}</a>
+        </Link>
       </div>
     </div>
   );

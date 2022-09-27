@@ -1,14 +1,25 @@
 //
 import type { FCC } from "react";
 //
-import { Footer, MobileHeader } from "common/components";
+import {
+  Drawer,
+  IgnoreParentSize,
+  MobileBottomNavigation,
+  MobileHeader,
+} from "common/components";
 
 export const MobileLayout: FCC = ({ children }) => {
   return (
-    <div className="flex min-h-screen flex-col bg-background">
-      <MobileHeader />
-      <main className="grow">{children}</main>
-      <Footer />
-    </div>
+    <Drawer>
+      <div className="px-5">
+        <IgnoreParentSize className="sticky top-0">
+          <MobileHeader />
+        </IgnoreParentSize>
+        <main className="py-5 pb-10">{children}</main>
+        <div className="sticky bottom-5">
+          <MobileBottomNavigation />
+        </div>
+      </div>
+    </Drawer>
   );
 };
