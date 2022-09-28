@@ -3,7 +3,6 @@ import type { FCC } from "react";
 //
 import {
   Drawer,
-  IgnoreParentSize,
   MobileBottomNavigation,
   MobileHeader,
 } from "common/components";
@@ -11,9 +10,9 @@ import {
 export const MobileLayout: FCC = ({ children }) => {
   return (
     <Drawer>
-      <IgnoreParentSize className="fixed top-0 w-full">
+      <div className="fixed top-0 w-full">
         <MobileHeader />
-      </IgnoreParentSize>
+      </div>
       <main className="p-5">
         <div className="h-[68px]"></div>
         {children}

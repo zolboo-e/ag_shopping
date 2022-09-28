@@ -15,7 +15,7 @@ export const CustomLinkButton: React.FC<
   return (
     <Link href={href}>
       <a
-        className={classNames("btn bg-primary normal-case", className)}
+        className={classNames("btn btn-primary normal-case", className)}
         {...props}
       >
         {children}

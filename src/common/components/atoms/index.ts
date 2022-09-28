@@ -4,4 +4,3 @@ export { CustomInput } from "./custom_input";
 export { CustomLinkButton } from "./custom_link_button";
 export { CustomLinkIconButton } from "./custom_link_icon_button";
 export { IgnoreParentSize } from "./ignore_parent_size";
-export { SectionTitle } from "./section_title";
