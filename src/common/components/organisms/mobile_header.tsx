@@ -17,7 +17,10 @@ export const MobileHeader: React.FC = () => {
         <div className="h-8 w-8 rounded-full bg-primary"></div>
         <p>{`Test user`}</p>
 
-        <CustomLinkIconButton className="btn-ghost absolute right-2.5" href="">
+        <CustomLinkIconButton
+          className="btn-ghost absolute right-2.5"
+          href="/cart"
+        >
           <CartIcon className="fill-gray-300" />
         </CustomLinkIconButton>
       </div>
