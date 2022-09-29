@@ -19,7 +19,7 @@ import {
   MostVisited,
   NewProducts,
   Services,
-} from "modules/others/home/components";
+} from "modules/others/components";
 
 export const HomePage: NextPageWithLayout = () => {
   return (

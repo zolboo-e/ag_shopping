@@ -1,3 +1,3 @@
-import { CategoriesPage } from "modules/others/home";
+import { CategoriesPage } from "modules/others";
 
 export default CategoriesPage;

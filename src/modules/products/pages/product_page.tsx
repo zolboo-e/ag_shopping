@@ -32,9 +32,9 @@ export const ProductPage: NextPageWithLayout<Test> = (props) => {
         {Array.from(Array(4).keys()).map((_, index) => (
           <div
             key={index}
-            className={classNames("aspect-1", index === 0 && "col-span-3")}
+            className={classNames("w-full", index === 0 && "col-span-3")}
           >
-            <div className="h-full w-full bg-white"></div>
+            <div className="aspect-1 bg-white"></div>
           </div>
         ))}
       </div>
@@ -55,8 +55,8 @@ export const ProductPage: NextPageWithLayout<Test> = (props) => {
         />
         <div className="grid grid-cols-5 gap-2.5">
           {Array.from(Array(5).keys()).map((index) => (
-            <div key={index} className={classNames("aspect-1")}>
-              <div className="h-full w-full bg-white"></div>
+            <div key={index} className={classNames("w-full")}>
+              <div className="aspect-1 bg-white"></div>
             </div>
           ))}
         </div>
@@ -69,8 +69,8 @@ export const ProductPage: NextPageWithLayout<Test> = (props) => {
         />
         <div className="grid grid-cols-5 gap-2.5">
           {Array.from(Array(10).keys()).map((index) => (
-            <div key={index} className={classNames("aspect-1")}>
-              <div className="flex h-full w-full items-center justify-center bg-white">
+            <div key={index} className={classNames("w-full")}>
+              <div className="flex aspect-1 items-center justify-center bg-white">
                 {index}
               </div>
             </div>
