@@ -155,7 +155,9 @@ export const ProductPage: NextPageWithLayout<Test> = (props) => {
   );
 };
 ProductPage.getLayout = (page, data: Test) => {
-  return <MobileSubLayout title={data.title}>{page}</MobileSubLayout>;
+  return (
+    <MobileSubLayout header={{ title: data.title }}>{page}</MobileSubLayout>
+  );
 };
 
 export const getStaticProps: GetStaticProps<{ title: string }> = async (

@@ -12,7 +12,7 @@ export const HeaderSearch: FC = () => {
       className="flex rounded-md"
       onSubmit={(event) => event.preventDefault()}
     >
-      <button className="z-10 my-[1px] -mr-[97px] flex w-[96px] items-center gap-x-9 rounded-md bg-white px-4">
+      <button className="my-[1px] -mr-[97px] flex w-[96px] items-center gap-x-9 rounded-md bg-white px-4">
         <p>All</p>
         <div className="grow-0 rounded-full bg-primary p-1">
           <ChevronDownIcon className="h-3 w-3 text-white" />

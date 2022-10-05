@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 //
-import { BellIcon, XIcon } from "common/assets/icons";
+import { BellIcon, XIcon } from "common/assets";
 import { classNames } from "common/utils";
 
 interface INotificationItem {

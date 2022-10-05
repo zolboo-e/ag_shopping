@@ -5,4 +5,5 @@ export { CartIcon } from "./cart";
 export { HomeIcon } from "./home";
 export { MenuIcon } from "./menu";
 export { SortingIcon } from "./sorting";
+export { VehicleIcon } from "./vehicle";
 export { XIcon } from "./x";

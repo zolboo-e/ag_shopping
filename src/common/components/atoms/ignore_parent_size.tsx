@@ -8,7 +8,9 @@ export const IgnoreParentSize: FCC<HTMLAttributes<HTMLDivElement>> = ({
   className,
 }) => {
   return (
-    <div className={classNames("-mx-[calc(50vw-50%)] bg-[#292d33]", className)}>
+    <div
+      className={classNames("-mx-[calc(50vw-50%)] bg-transparent", className)}
+    >
       {children}
     </div>
   );

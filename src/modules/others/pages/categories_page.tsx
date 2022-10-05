@@ -2,7 +2,7 @@
 import type { NextPageWithLayout } from "next";
 
 //
-import { SortingIcon } from "common/assets/icons";
+import { SortingIcon } from "common/assets";
 import {
   CustomButton,
   CustomIconButton,

@@ -1,7 +1,7 @@
 //
 
 //
-import { CartIcon, MenuIcon } from "common/assets/icons";
+import { CartIcon, MenuIcon } from "common/assets";
 import { CustomLinkIconButton, drawerKey } from "common/components";
 
 export const MobileHeader: React.FC = () => {

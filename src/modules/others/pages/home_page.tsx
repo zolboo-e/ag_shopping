@@ -3,13 +3,16 @@ import type { NextPageWithLayout } from "next";
 import Link from "next/link";
 
 //
-import { SortingIcon } from "common/assets/icons";
+import { SortingIcon, VehicleIcon } from "common/assets";
 import {
   CustomButton,
   CustomIconButton,
   CustomInput,
   CustomLinkButton,
+  IgnoreParentSize,
   MainLayout,
+  ProductLargeMobile,
+  ProductSmallMobile,
   SectionTitleMobile,
 } from "common/components";
 //
@@ -37,20 +40,27 @@ export const HomePage: NextPageWithLayout = () => {
           title="Онцлох категори"
         />
         <ul className="grid grid-cols-3 gap-4">
-          {Array.from(Array(6).keys()).map((item) => (
-            <li key={item}>
-              <Link href="/categories">
-                <a>
-                  <div className="w-full bg-white">
-                    <div className="flex flex-col items-center justify-between gap-y-4 p-5">
-                      <div className="h-10 w-10 rounded-full bg-primary"></div>
-                      <p>{`Dumpings`}</p>
+          {Array.from(Array(6).keys())
+            .map((item) => ({
+              key: `category_${item}`,
+              value: `Category ${item}`,
+            }))
+            .map(({ key, value }) => (
+              <li key={key}>
+                <Link href="/categories">
+                  <a>
+                    <div className="h-full w-full bg-white">
+                      <div className="flex flex-col items-center justify-between gap-y-4 p-5">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
+                          <VehicleIcon />
+                        </div>
+                        <h5 className="text-center font-medium">{value}</h5>
+                      </div>
                     </div>
-                  </div>
-                </a>
-              </Link>
-            </li>
-          ))}
+                  </a>
+                </Link>
+              </li>
+            ))}
         </ul>
       </div>
       <div className="flex flex-col gap-y-5">
@@ -58,26 +68,44 @@ export const HomePage: NextPageWithLayout = () => {
           subtitle="We look out for you before"
           title="Шинэ бараа"
         />
-        <ul className="carousel gap-x-5">
-          {Array.from(Array(6).keys()).map((item) => (
-            <li key={item} className="carousel-item">
-              <div className="h-80 w-48 bg-white"></div>
-            </li>
-          ))}
-        </ul>
+        <IgnoreParentSize>
+          <ul className="carousel scroll-px-5 gap-x-5 px-5">
+            {Array.from(Array(6).keys()).map((item) => (
+              <li key={item} className="carousel-item">
+                <div className="w-48">
+                  <ProductLargeMobile
+                    id={`${item}`}
+                    image={`/assets/images/product_dummy.png`}
+                    price={370000}
+                    title="Opel GM DEXO S2 Ultra Motor Oil"
+                  />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </IgnoreParentSize>
       </div>
       <div className="flex flex-col gap-y-5">
         <SectionTitleMobile
           subtitle="We look out for you before"
           title="Онцлох бараа"
         />
-        <ul className="carousel gap-x-5">
-          {Array.from(Array(6).keys()).map((item) => (
-            <li key={item} className="carousel-item">
-              <div className="h-80 w-48 bg-white"></div>
-            </li>
-          ))}
-        </ul>
+        <IgnoreParentSize>
+          <ul className="carousel scroll-px-5 gap-x-5 px-5">
+            {Array.from(Array(6).keys()).map((item) => (
+              <li key={item} className="carousel-item">
+                <div className="w-48">
+                  <ProductLargeMobile
+                    id={`${item}`}
+                    image={`/assets/images/product_dummy.png`}
+                    price={370000}
+                    title="Opel GM DEXO S2 Ultra Motor Oil"
+                  />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </IgnoreParentSize>
       </div>
       <div className="flex flex-col gap-y-5">
         <SectionTitleMobile
@@ -87,7 +115,12 @@ export const HomePage: NextPageWithLayout = () => {
         <ul className="grid grid-cols-2 gap-4">
           {Array.from(Array(6).keys()).map((item) => (
             <li key={item}>
-              <div className="h-80 bg-white"></div>
+              <ProductSmallMobile
+                id={`${item}`}
+                image={`/assets/images/product_dummy.png`}
+                price={370000}
+                title="Opel GM DEXO S2 Ultra Motor Oil"
+              />
             </li>
           ))}
         </ul>
@@ -101,7 +134,12 @@ export const HomePage: NextPageWithLayout = () => {
         <ul className="grid grid-cols-2 gap-4">
           {Array.from(Array(6).keys()).map((item) => (
             <li key={item}>
-              <div className="h-80 bg-white"></div>
+              <ProductSmallMobile
+                id={`${item}`}
+                image={`/assets/images/product_dummy.png`}
+                price={370000}
+                title="Opel GM DEXO S2 Ultra Motor Oil"
+              />
             </li>
           ))}
         </ul>

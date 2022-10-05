@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 //
-import { AppsIcon, BellIcon, HomeIcon } from "common/assets/icons";
+import { AppsIcon, BellIcon, HomeIcon } from "common/assets";
 import { CustomLinkIconButton } from "common/components";
 import { classNames } from "common/utils";
 

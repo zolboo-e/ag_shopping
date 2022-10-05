@@ -1,6 +1,6 @@
 import { NextMiddleware, NextResponse } from "next/server";
 
-const authRoutes: string[] = ["/auth/login"];
+const authRoutes: string[] = ["/auth/login", "/auth/register"];
 const protectedRoutes: string[] = [];
 export const middleware: NextMiddleware = (request) => {
   const { pathname } = request.nextUrl;

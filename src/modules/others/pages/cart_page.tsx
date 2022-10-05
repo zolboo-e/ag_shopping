@@ -113,5 +113,7 @@ export const CartPage: NextPageWithLayout = (props) => {
   );
 };
 CartPage.getLayout = (page) => {
-  return <MobileSubLayout title="Your Cart">{page}</MobileSubLayout>;
+  return (
+    <MobileSubLayout header={{ title: "Your Cart" }}>{page}</MobileSubLayout>
+  );
 };

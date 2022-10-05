@@ -18,7 +18,7 @@ export const SectionTitleMobile: React.FC<ISectionTitle> = ({
       )}
     >
       <div className="flex flex-col gap-x-1">
-        <h2>{title}</h2>
+        <h2 className="font-medium">{title}</h2>
         <small className="text-gray-300">{subtitle}</small>
       </div>
     </div>

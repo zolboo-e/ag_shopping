@@ -1,10 +1,9 @@
 //
-import { ArrowSmallLeftIcon } from "@heroicons/react/24/outline";
 import type { NextPageWithLayout } from "next";
-import Image from "next/image";
 import Link from "next/link";
 
 //
+import { Logo } from "common/assets";
 import { CustomButton, CustomLinkButton } from "common/components";
 import { classNames } from "common/utils";
 
@@ -28,7 +27,7 @@ export const LoginPage: NextPageWithLayout = () => {
   //   </div>
   // );
   return (
-    <div className="container mx-auto">
+    <div className="h-full overflow-y-auto px-10">
       <LoginPageView />
     </div>
   );
@@ -36,41 +35,25 @@ export const LoginPage: NextPageWithLayout = () => {
 
 const LoginPageView: React.FC = () => {
   return (
-    <div className="flex h-screen flex-col items-center justify-between gap-y-12 py-10">
+    <div className="flex min-h-screen flex-col items-center justify-between gap-y-24 py-10">
       {/* leading */}
       <div className="flex w-full flex-col items-center gap-y-12">
-        {/* header */}
-        <div className={classNames("flex w-full", "lg:hidden")}>
-          <Link href="">
-            <a className="btn btn-square btn-ghost bg-gray-100 text-black">
-              <ArrowSmallLeftIcon className="h-8 w-8" />
-            </a>
-          </Link>
-        </div>
         {/* logo */}
-        <div className="flex items-center gap-x-1.5">
-          <div className="avatar">
-            <div className="w-12 rounded-full bg-primary"></div>
-          </div>
-          <div className="flex flex-col">
-            <h1 className="text-3xl leading-none">GARAGE.MN</h1>
-            <small className="text-xs leading-none">ТАНЫ ДИЖИТАЛ ГАРАЖ</small>
-          </div>
-        </div>
+        <Logo />
         {/* form */}
         <form className="flex w-full flex-col gap-y-8">
           <fieldset className="flex flex-col gap-y-4">
             <input
               className={classNames(
-                "input bg-gray-100 pl-10",
-                "bg-[url('/assets/icons/person.svg')] bg-[length:40px_20px] bg-left bg-no-repeat bg-origin-padding"
+                "input bg-gray-200 pl-12 font-medium",
+                "bg-[url('/assets/icons/person.svg')] bg-[length:48px_20px] bg-left bg-no-repeat bg-origin-padding"
               )}
-              placeholder="Хэрэглэгчийн нууц үг"
+              placeholder="Хэрэглэгчийн нэр"
             />
             <input
               className={classNames(
-                "input bg-gray-100 pl-10",
-                "bg-[url('/assets/icons/lock.svg')] bg-[length:40px_20px] bg-left bg-no-repeat bg-origin-padding"
+                "input bg-gray-200 pl-12 font-medium",
+                "bg-[url('/assets/icons/lock.svg')] bg-[length:48px_20px] bg-left bg-no-repeat bg-origin-padding"
               )}
               placeholder="Нууц үг"
               type="password"
@@ -78,7 +61,7 @@ const LoginPageView: React.FC = () => {
           </fieldset>
           <CustomButton>{`Нэвтрэх`}</CustomButton>
           <div className="flex justify-center gap-x-1.5 text-gray-400">
-            Нууц үг мартсан уу?
+            {`Нууц үг мартсан уу?`}
             <Link href="/auth/register">
               <a className="btn-link font-medium text-gray-500">Сэргээх</a>
             </Link>
@@ -87,22 +70,22 @@ const LoginPageView: React.FC = () => {
       </div>
       {/* trailing */}
       <div className="flex w-full flex-col gap-y-2.5">
-        <CustomLinkButton href="" className="bg-black">
+        <CustomLinkButton href="/" className="border-none bg-black">
           {`Log in with Apple`}
         </CustomLinkButton>
-        <CustomLinkButton href="" className="bg-[#3b5998]">
+        <CustomLinkButton href="/" className="border-none bg-[#3b5998]">
           {`Log in with Facebook`}
         </CustomLinkButton>
         <CustomLinkButton
-          href=""
-          className="btn-ghost border-gray-100 bg-transparent"
+          href="/"
+          className="btn-ghost border-gray-200 bg-transparent"
         >
           {`Login as guest`}
         </CustomLinkButton>
-        <div className="divider">OR</div>
+        <div className="divider"></div>
         <CustomLinkButton
           href="/auth/register"
-          className="btn-ghost border-gray-100 bg-gray-100"
+          className="btn-ghost border-none bg-gray-200"
         >
           {`Бүртгэл үүсгэх`}
         </CustomLinkButton>
