@@ -2,12 +2,14 @@
 import type { NextPageWithLayout } from "next";
 
 //
-import { SortingIcon } from "common/assets";
+import { ArrowDownIcon, SortingIcon } from "common/assets";
 import {
   CustomButton,
   CustomIconButton,
   CustomLinkButton,
+  IgnoreParentSize,
   MainLayout,
+  ProductSmallMobile,
   SectionTitleMobile,
 } from "common/components";
 import { classNames } from "common/utils";
@@ -21,18 +23,59 @@ export const CategoriesPage: NextPageWithLayout = () => {
           <SortingIcon className="fill-gray-300" />
         </CustomIconButton>
       </div>
-      <ul className="carousel gap-x-5">
-        {Array.from(Array(10).keys()).map((item, index) => (
-          <li key={item} className="carousel-item">
-            <CustomButton
-              className={classNames(
-                "px-6",
-                index !== 0 && "border-none bg-white text-black"
-              )}
-            >{`All ${index}`}</CustomButton>
-          </li>
-        ))}
-      </ul>
+      <IgnoreParentSize>
+        <ul className="carousel scroll-px-5 gap-x-5 px-5">
+          {[
+            "All",
+            "Dumpings",
+            "Auto Detail",
+            "Suspension",
+            "Dumpings",
+            "Auto Detail",
+            "Suspension",
+            "Dumpings",
+            "Auto Detail",
+            "Suspension",
+          ].map((item, index) => (
+            <li key={item} className="carousel-item">
+              <CustomButton
+                className={classNames(
+                  "px-6",
+                  index !== 0 && "border-none bg-white text-black"
+                )}
+              >{`${item}`}</CustomButton>
+            </li>
+          ))}
+        </ul>
+      </IgnoreParentSize>
+      <div className="rounded-md bg-white p-4">
+        <div className="grid grid-cols-2 gap-4">
+          <div className="col-span-2 w-full rounded-md bg-gray-100 px-5 py-4">
+            <div className="flex items-center justify-between">
+              <div className="text-gray-300">{`Үйлдвэрлэгч`}</div>
+              <ArrowDownIcon />
+            </div>
+          </div>
+          <div className="w-full rounded-md bg-gray-100 px-5 py-4">
+            <div className="flex items-center justify-between">
+              <div className="text-gray-300">{`Загвар`}</div>
+              <ArrowDownIcon />
+            </div>
+          </div>
+          <div className="w-full rounded-md bg-gray-100 px-5 py-4">
+            <div className="flex items-center justify-between">
+              <div className="text-gray-300">{`Мотор`}</div>
+              <ArrowDownIcon />
+            </div>
+          </div>
+          <div className="col-span-2 w-full rounded-md bg-gray-100 px-5 py-4">
+            <div className="flex items-center justify-start">
+              <div className="text-gray-300">{`0000 АБГ / Заавал биш`}</div>
+            </div>
+          </div>
+          <CustomButton className="col-span-2">{`Хайлт хийх`}</CustomButton>
+        </div>
+      </div>
       <div className="flex flex-col gap-y-5">
         <SectionTitleMobile
           subtitle="We look out for you before"
@@ -41,7 +84,12 @@ export const CategoriesPage: NextPageWithLayout = () => {
         <ul className="grid grid-cols-2 gap-4">
           {Array.from(Array(6).keys()).map((item) => (
             <li key={item}>
-              <div className="h-80 bg-white"></div>
+              <ProductSmallMobile
+                id={`${item}`}
+                image={`/assets/images/product_dummy.png`}
+                price={370000}
+                title="Opel GM DEXO S2 Ultra Motor Oil"
+              />
             </li>
           ))}
         </ul>
@@ -55,7 +103,12 @@ export const CategoriesPage: NextPageWithLayout = () => {
         <ul className="grid grid-cols-2 gap-4">
           {Array.from(Array(6).keys()).map((item) => (
             <li key={item}>
-              <div className="h-80 bg-white"></div>
+              <ProductSmallMobile
+                id={`${item}`}
+                image={`/assets/images/product_dummy.png`}
+                price={370000}
+                title="Opel GM DEXO S2 Ultra Motor Oil"
+              />
             </li>
           ))}
         </ul>
@@ -69,7 +122,12 @@ export const CategoriesPage: NextPageWithLayout = () => {
         <ul className="grid grid-cols-2 gap-4">
           {Array.from(Array(6).keys()).map((item) => (
             <li key={item}>
-              <div className="h-80 bg-white"></div>
+              <ProductSmallMobile
+                id={`${item}`}
+                image={`/assets/images/product_dummy.png`}
+                price={370000}
+                title="Opel GM DEXO S2 Ultra Motor Oil"
+              />
             </li>
           ))}
         </ul>

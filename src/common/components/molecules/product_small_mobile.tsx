@@ -9,7 +9,7 @@ export const ProductSmallMobile: FC<
   Omit<IProduct, "images"> & { image: string }
 > = ({ id, image, price, title }) => {
   return (
-    <div className="bg-white p-5">
+    <div className="rounded bg-white p-5">
       <div className="flex flex-col gap-y-5">
         <div className="relative w-full">
           <div className="aspect-1">

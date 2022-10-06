@@ -1,5 +1,6 @@
 export { AppsIcon } from "./apps";
 export { ArrowLeftIcon } from "./arrow_left";
+export { ArrowDownIcon } from "./arrow_down";
 export { BellIcon } from "./bell";
 export { CartIcon } from "./cart";
 export { HomeIcon } from "./home";

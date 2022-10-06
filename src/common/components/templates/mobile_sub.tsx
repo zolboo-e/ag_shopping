@@ -1,11 +1,11 @@
 //
-import type { FCC } from "react";
+import type { FCC, ReactNode } from "react";
 //
 import { IgnoreParentSize, MobileSubHeader } from "common/components";
 
 interface IMobileSubLayout {
   header?: {
-    hasBackButton?: boolean;
+    backButton?: ReactNode | null;
     title?: string;
   };
 }

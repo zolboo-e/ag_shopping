@@ -15,6 +15,7 @@ import {
   ProductSmallMobile,
   SectionTitleMobile,
 } from "common/components";
+
 //
 import {
   BrowseHistory,
@@ -43,14 +44,14 @@ export const HomePage: NextPageWithLayout = () => {
           {Array.from(Array(6).keys())
             .map((item) => ({
               key: `category_${item}`,
-              value: `Category ${item}`,
+              value: `Category`,
             }))
             .map(({ key, value }) => (
               <li key={key}>
                 <Link href="/categories">
                   <a>
-                    <div className="h-full w-full bg-white">
-                      <div className="flex flex-col items-center justify-between gap-y-4 p-5">
+                    <div className="h-full w-full">
+                      <div className="flex flex-col items-center justify-between gap-y-4 rounded bg-white p-5">
                         <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
                           <VehicleIcon />
                         </div>

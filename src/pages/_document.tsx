@@ -10,7 +10,7 @@ class CustomDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body className="bg-[#f4f6f8]">
+        <body className="bg-gray-100">
           <Main />
           <NextScript />
         </body>
